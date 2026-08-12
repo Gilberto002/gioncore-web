@@ -229,9 +229,10 @@
             :key="i"
             class="gc-service-card gc-reveal"
             :style="{ transitionDelay: (i * 0.12) + 's' }"
-            :class="{ hovered: hovSvc === i }"
+            :class="{ hovered: hovSvc === i, active: activeSvc === i }"
             @mouseenter="hovSvc = i"
             @mouseleave="hovSvc = null"
+            @click="activeSvc = activeSvc === i ? null : i"
           >
             <div class="gc-service-card__number">0{{ i + 1 }}</div>
             <div class="gc-service-card__icon">
@@ -244,8 +245,11 @@
             </div>
             <h3 class="gc-service-card__title">{{ svc.title }}</h3>
             <p class="gc-service-card__desc">{{ svc.desc }}</p>
+            <div v-if="activeSvc === i" class="gc-service-card__detail">
+              <span>Ideal para:</span> {{ svc.fit }}
+            </div>
             <div class="gc-service-card__cta">
-              Saber más
+              {{ activeSvc === i ? 'Ver menos' : 'Saber más' }}
               <svg viewBox="0 0 16 16" fill="none" width="14">
                 <path d="M3 8h10M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
@@ -633,8 +637,9 @@ const hexGrid = (() => {
 
 const services = [
   {
-    title: 'Web & Mobile Development',
-    desc:  'Aplicaciones web y móviles de alta performance. Desde MVPs hasta plataformas enterprise escalables con millones de usuarios.',
+    title: 'Software a la medida',
+    desc:  'Plataformas web, paneles administrativos, CRMs, ERPs y sistemas internos hechos para la operación real de tu negocio.',
+    fit:   'empresas que ya tienen un proceso claro y necesitan convertirlo en una herramienta digital robusta.',
     vb: '0 0 24 24',
     paths: [
       { d: 'M2 3h20v14H2zM8 21h8M12 17v4' },
@@ -642,16 +647,19 @@ const services = [
     ],
   },
   {
-    title: 'Cloud Solutions',
-    desc:  'Arquitecturas cloud-native en AWS y GCP. Infraestructura escalable, segura y optimizada con pipelines CI/CD de clase mundial.',
+    title: 'Automatización con IA',
+    desc:  'Flujos inteligentes para ahorrar horas operativas: captura de datos, asistentes internos, análisis documental y reportes automáticos.',
+    fit:   'equipos que reciben demasiadas solicitudes, archivos o tareas repetitivas y quieren operar con más velocidad.',
     vb: '0 0 24 24',
     paths: [
-      { d: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' },
+      { d: 'M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1' },
+      { d: 'M12 8a4 4 0 100 8 4 4 0 000-8z' },
     ],
   },
   {
-    title: 'AI & Data Analytics',
-    desc:  'Modelos de machine learning y visión por computadora. Pipelines MLOps production-ready que transforman datos en decisiones.',
+    title: 'SaaS y productos digitales',
+    desc:  'Diseño y desarrollo de productos listos para vender: suscripciones, usuarios, permisos, pagos, dashboards y métricas.',
+    fit:   'negocios que quieren lanzar una plataforma propia y crecerla sin depender de soluciones genéricas.',
     vb: '0 0 24 24',
     paths: [
       { d: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' },
@@ -669,38 +677,37 @@ const whyItems = [
 
 const portfolio = [
   {
-    title:    'Plataforma Financiera con IA',
-    category: 'FinTech',
-    year:     '2024',
-    desc:     'Motor de detección de fraude en tiempo real procesando 2.4M transacciones/día con 99.97% de precisión.',
-    url:      'fintech.gioncore.com',
-    badge:    '99.97%',
+    title:    'NOM-35 Digital',
+    category: 'HR Tech',
+    year:     '2026',
+    desc:     'Sistema para aplicar cuestionarios NOM-035, administrar centros de trabajo y generar reportes listos para auditoría.',
+    url:      'nom35.gioncore.com',
+    badge:    'NOM-35',
     screenBg: 'linear-gradient(135deg, #0D2240 0%, #0a3d6e 100%)',
     bars:     [40, 65, 48, 82, 60, 95, 70, 100],
-    results:  ['+78% detección fraude', '0.3ms latencia', '$2.4B procesados'],
+    results:  ['Evaluaciones digitales', 'Reportes PDF', 'Multi-empresa'],
   },
   {
-    title:    'App de Diagnóstico Médico',
-    category: 'HealthTech',
-    year:     '2024',
-    desc:     'Visión por computadora para análisis de imágenes médicas. Implementado en 8 hospitales con precisión clínica validada.',
-    url:      'health.gioncore.com',
-    badge:    '94.3%',
+    title:    'Portal de Ventas SaaS',
+    category: 'E-commerce B2B',
+    year:     '2026',
+    desc:     'Landing comercial con captura de leads, catálogo de soluciones, cotización inicial y seguimiento de prospectos.',
+    url:      'sales.gioncore.com',
+    badge:    'LEADS',
     screenBg: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)',
     bars:     [55, 70, 60, 85, 72, 90, 80, 94],
-    results:  ['94.3% precisión', '3× más rápido', '8 hospitales'],
+    results:  ['CRM inicial', 'Formulario inteligente', 'Panel admin'],
   },
   {
-    title:    'NOM-35 Digital — gioncore.com',
-    category: 'HR Tech',
-    year:     '2024',
-    desc:     'Plataforma para cumplimiento de la NOM-035-STPS-2018. Evaluación de riesgos psicosociales, reportes automáticos y dashboard ejecutivo para empresas mexicanas.',
-    url:      'gioncore.com',
-    badge:    'NOM-35',
+    title:    'Automatizador Operativo',
+    category: 'AI Ops',
+    year:     '2026',
+    desc:     'Herramienta para convertir archivos, solicitudes y tareas repetitivas en flujos automáticos con métricas de avance.',
+    url:      'ops.gioncore.com',
+    badge:    'AI OPS',
     screenBg: 'linear-gradient(135deg, #0a2f1e 0%, #0d4a2e 100%)',
     bars:     [50, 72, 60, 88, 65, 95, 78, 100],
-    results:  ['100% digital', 'Reportes automáticos', 'Multi-empresa'],
-    link:     'https://gioncore.com',
+    results:  ['Menos trabajo manual', 'Dashboards', 'Alertas'],
   },
 ]
 
@@ -793,6 +800,7 @@ const footerCols = [
 const scrolled    = ref(false)
 const mobileOpen  = ref(false)
 const hovSvc      = ref(null)
+const activeSvc   = ref(null)
 const hovBar      = ref(null)
 const hovProj     = ref(null)
 const sending     = ref(false)
@@ -818,12 +826,26 @@ const scrollTo = (selector) => {
 const onScroll = () => { scrolled.value = window.scrollY > 60 }
 
 const setupReveal = () => {
+  const revealEls = document.querySelectorAll('.gc-reveal')
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('visible'))
+    return
+  }
+
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) }
     })
-  }, { threshold: 0.08 })
-  document.querySelectorAll('.gc-reveal').forEach(el => obs.observe(el))
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' })
+  revealEls.forEach(el => {
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible')
+      return
+    }
+    obs.observe(el)
+  })
 }
 
 let cursorX = 0, cursorY = 0, dotX = 0, dotY = 0
@@ -1362,7 +1384,8 @@ em { font-style: normal; }
   transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s, border-color 0.3s;
   cursor: none;
 }
-.gc-service-card:hover {
+.gc-service-card:hover,
+.gc-service-card.active {
   transform: translateY(-10px);
   box-shadow: var(--card-shadow-hover);
   border-color: rgba(0,123,255,0.2);
@@ -1379,7 +1402,8 @@ em { font-style: normal; }
   display: flex; align-items: center; justify-content: center;
   transition: transform 0.3s, background 0.3s;
 }
-.gc-service-card:hover .gc-service-card__icon {
+.gc-service-card:hover .gc-service-card__icon,
+.gc-service-card.active .gc-service-card__icon {
   transform: scale(1.1) rotate(3deg);
   background: linear-gradient(135deg, rgba(0,123,255,0.15) 0%, rgba(163,230,53,0.15) 100%);
 }
@@ -1388,16 +1412,32 @@ em { font-style: normal; }
   letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px;
 }
 .gc-service-card__desc { font-size: 13px; color: var(--muted); line-height: 1.72; margin-bottom: 20px; }
+.gc-service-card__detail {
+  margin: -4px 0 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(0,123,255,0.06);
+  border: 1px solid rgba(0,123,255,0.12);
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.gc-service-card__detail span {
+  color: var(--electric-blue);
+  font-weight: 800;
+}
 .gc-service-card__cta {
   display: flex; align-items: center; gap: 6px;
   font-size: 13px; font-weight: 700; color: var(--electric-blue);
   transition: gap 0.2s;
 }
-.gc-service-card:hover .gc-service-card__cta { gap: 10px; }
+.gc-service-card:hover .gc-service-card__cta,
+.gc-service-card.active .gc-service-card__cta { gap: 10px; }
 
 /* Animated border on hover — usar box-shadow en lugar de pseudo-elemento con z-index */
 .gc-service-card__border-anim { display: none; }
-.gc-service-card:hover {
+.gc-service-card:hover,
+.gc-service-card.active {
   box-shadow: var(--card-shadow-hover), 0 0 0 2px rgba(0,123,255,0.25);
 }
 
@@ -1406,7 +1446,8 @@ em { font-style: normal; }
   background: linear-gradient(135deg, rgba(0,123,255,0.04) 0%, transparent 60%);
   opacity: 0; transition: opacity 0.3s; pointer-events: none;
 }
-.gc-service-card:hover .gc-service-card__shine { opacity: 1; }
+.gc-service-card:hover .gc-service-card__shine,
+.gc-service-card.active .gc-service-card__shine { opacity: 1; }
 
 /* ═══════════ WHY ═══════════ */
 .gc-why-layout { display: grid; grid-template-columns: 4fr 6fr; gap: 80px; align-items: center; }
