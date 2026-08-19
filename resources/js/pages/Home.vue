@@ -96,30 +96,30 @@
           <div class="gc-hero__eyebrow">
             <span class="gc-chip">
               <span class="gc-chip__dot"></span>
-              Transformando Ideas en Software
+              Software serio para operaciones reales
             </span>
           </div>
 
           <h1 class="gc-hero__h1">
-            <span class="gc-hero__h1-line">GIONCORE:</span>
-            <span class="gc-hero__h1-line gc-hero__h1--accent">Software de</span>
-            <span class="gc-hero__h1-line">Alto Rendimiento</span>
+            <span class="gc-hero__h1-line">GIONCORE</span>
+            <span class="gc-hero__h1-line gc-hero__h1--accent">Productos digitales</span>
+            <span class="gc-hero__h1-line">con criterio empresarial</span>
           </h1>
 
           <p class="gc-hero__sub">
-            Desarrollo de Software y Tecnología a la Medida de tu Visión.
-            Construimos el futuro digital de tu empresa con precisión y velocidad.
+            Diseñamos plataformas SaaS, automatizaciones e inteligencia operativa para empresas que necesitan orden,
+            evidencia y velocidad sin sacrificar confianza.
           </p>
 
           <div class="gc-hero__ctas">
             <a href="#servicios" @click.prevent="scrollTo('#servicios')" class="gc-btn gc-btn--primary">
-              <span>Start Your Project</span>
+              <span>Ver soluciones</span>
               <svg viewBox="0 0 20 20" fill="none" width="18">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
             <a href="#portfolio" @click.prevent="scrollTo('#portfolio')" class="gc-btn gc-btn--ghost">
-              Ver Portfolio
+              Ver productos
             </a>
           </div>
 
@@ -138,13 +138,13 @@
           <div class="gc-card gc-hero__card" ref="mainCard">
             <div class="gc-card__header">
               <div class="gc-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
-              <span class="gc-card__label">gioncore.ai — live dashboard</span>
+              <span class="gc-card__label">gioncore.cloud — control operativo</span>
               <span class="gc-card__status">
                 <span class="gc-status-pulse"></span>LIVE
               </span>
             </div>
             <div class="gc-card__body">
-              <div class="gc-chart-heading">Rendimiento del Sistema</div>
+              <div class="gc-chart-heading">Salud de productos activos</div>
               <div class="gc-bars">
                 <div
                   v-for="(b, i) in dashBars"
@@ -167,7 +167,7 @@
               <div class="gc-activity-bar">
                 <div class="gc-activity-bar__fill"></div>
               </div>
-              <div class="gc-activity-label">Procesando transacciones en tiempo real</div>
+              <div class="gc-activity-label">Sincronizando evidencias, reportes y flujos críticos</div>
             </div>
           </div>
 
@@ -178,8 +178,8 @@
               <path d="M5 8l2 2 4-4" stroke="#A3E635" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <div>
-              <span class="gc-float-badge__val">99.9%</span>
-              <span class="gc-float-badge__lbl">Uptime SLA</span>
+              <span class="gc-float-badge__val">Auditable</span>
+              <span class="gc-float-badge__lbl">Trazabilidad</span>
             </div>
           </div>
 
@@ -189,8 +189,8 @@
               <path d="M2 12l3-3 3 3 5-6" stroke="#007BFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <div>
-              <span class="gc-float-badge__val">+34%</span>
-              <span class="gc-float-badge__lbl">Conversión</span>
+              <span class="gc-float-badge__val">3</span>
+              <span class="gc-float-badge__lbl">Productos base</span>
             </div>
           </div>
 
@@ -201,8 +201,8 @@
               <path d="M8 2v2M8 12v2M2 8h2M12 8h2" stroke="#00c6ff" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <div>
-              <span class="gc-float-badge__val">AI Ready</span>
-              <span class="gc-float-badge__lbl">ML Pipeline</span>
+              <span class="gc-float-badge__val">IA útil</span>
+              <span class="gc-float-badge__lbl">Sin humo</span>
             </div>
           </div>
         </div>
@@ -218,9 +218,9 @@
     <section class="gc-section gc-section--light" id="servicios" aria-label="Nuestros Servicios">
       <div class="gc-container">
         <div class="gc-section__head gc-reveal" style="text-align:center">
-          <span class="gc-eyebrow">Nuestros Servicios</span>
-          <h2 class="gc-section__h2">¿Qué construimos <em>para ti?</em></h2>
-          <p class="gc-section__desc">Soluciones tecnológicas diseñadas para impulsar tu crecimiento y diferenciarte de la competencia.</p>
+          <span class="gc-eyebrow">Capacidades</span>
+          <h2 class="gc-section__h2">Construimos sistemas que <em>aguantan operación</em></h2>
+          <p class="gc-section__desc">Nos enfocamos en flujos completos: usuarios, permisos, datos, reportes, automatización y mantenimiento.</p>
         </div>
 
         <div class="gc-services-grid">
@@ -266,13 +266,13 @@
       <div class="gc-container">
         <div class="gc-why-layout">
           <div class="gc-why-left gc-reveal">
-            <span class="gc-eyebrow gc-eyebrow--light">Por Qué GIONCORE</span>
+            <span class="gc-eyebrow gc-eyebrow--light">Cómo trabajamos</span>
             <h2 class="gc-section__h2 gc-section__h2--light">
-              Precisión técnica con <span class="gc-accent-green">impacto real</span>
+              Producto, ingeniería y operación en <span class="gc-accent-green">una misma conversación</span>
             </h2>
             <p class="gc-why-desc">
-              Somos un equipo de ingenieros comprometidos con la excelencia técnica.
-              Cada proyecto es una oportunidad de superar expectativas.
+              Evitamos el show técnico innecesario. Primero entendemos el proceso, después diseñamos una solución medible,
+              mantenible y lista para crecer con tu empresa.
             </p>
             <!-- Animated counter strip -->
             <div class="gc-counter-strip">
@@ -305,12 +305,12 @@
     </section>
 
     <!-- ══════════════ PORTFOLIO ══════════════ -->
-    <section class="gc-section gc-section--light" id="portfolio" aria-label="Portfolio">
+    <section class="gc-section gc-section--light" id="portfolio" aria-label="Productos">
       <div class="gc-container">
         <div class="gc-section__head gc-reveal">
-          <span class="gc-eyebrow">Portfolio</span>
-          <h2 class="gc-section__h2">Proyectos que <em>hablan por sí solos</em></h2>
-          <p class="gc-section__desc">Resultados reales para empresas reales. No prometemos, demostramos.</p>
+          <span class="gc-eyebrow">Productos</span>
+          <h2 class="gc-section__h2">Tres líneas de producto <em>listas para adaptar</em></h2>
+          <p class="gc-section__desc">Soluciones con base técnica reutilizable y personalización por industria, proceso y nivel de madurez.</p>
         </div>
 
         <div class="gc-portfolio-grid">
@@ -339,6 +339,10 @@
                       ></div>
                     </div>
                     <div class="gc-mockup__badge">{{ proj.badge }}</div>
+                    <div class="gc-mockup__signal">
+                      <span>{{ proj.signal }}</span>
+                      <strong>{{ proj.metric }}</strong>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -349,7 +353,7 @@
                 :target="proj.link ? '_blank' : '_self'"
                 rel="noopener"
               >
-                <span class="gc-portfolio-card__overlay-text">Ver Proyecto →</span>
+                <span class="gc-portfolio-card__overlay-text">Solicitar demo</span>
               </a>
             </div>
 
@@ -360,6 +364,7 @@
               </div>
               <h3 class="gc-portfolio-card__title">{{ proj.title }}</h3>
               <p class="gc-portfolio-card__desc">{{ proj.desc }}</p>
+              <div class="gc-portfolio-card__stage">{{ proj.stage }}</div>
               <div class="gc-portfolio-card__results">
                 <span v-for="r in proj.results" :key="r" class="gc-result">{{ r }}</span>
               </div>
@@ -376,13 +381,15 @@
           <div class="gc-about-left gc-reveal">
             <span class="gc-eyebrow gc-eyebrow--light">Sobre Nosotros</span>
             <h2 class="gc-section__h2 gc-section__h2--light">
-              Ingeniería con <span class="gc-accent-green">propósito</span>
+              Tecnología con <span class="gc-accent-green">responsabilidad</span>
             </h2>
             <p class="gc-about-desc">
-              Somos GIONCORE — un equipo de ingenieros, arquitectos de software y especialistas en IA que construyen soluciones digitales de alto rendimiento para empresas que quieren liderar su industria.
+              GIONCORE nace para construir software confiable, entendible y útil. Nuestra prioridad es que cada plataforma
+              tenga lógica de negocio clara, seguridad básica bien resuelta y una experiencia que el equipo realmente pueda usar.
             </p>
             <p class="gc-about-desc">
-              No subcontratamos. No usamos plantillas genéricas. Cada proyecto es construido desde cero con las mejores prácticas de la industria.
+              Trabajamos con una base propia para acelerar entregas, pero cada implementación se adapta a reglas reales:
+              aprobaciones, evidencias, reportes, usuarios, permisos y operación diaria.
             </p>
             <a href="#contacto" @click.prevent="scrollTo('#contacto')" class="gc-btn gc-btn--primary gc-btn--green">
               Trabaja con nosotros
@@ -416,10 +423,10 @@
         </svg>
       </div>
       <div class="gc-container gc-cta-band__inner">
-        <h2 class="gc-cta-band__title">¿Listo para llevar tu empresa al siguiente nivel?</h2>
-        <p class="gc-cta-band__sub">Tu proyecto comienza con una conversación. Sin compromiso, sin formularios genéricos.</p>
+        <h2 class="gc-cta-band__title">Convirtamos tu proceso en un producto confiable</h2>
+        <p class="gc-cta-band__sub">Revisamos tu operación, detectamos riesgos y proponemos una primera versión con alcance claro.</p>
         <a href="#contacto" @click.prevent="scrollTo('#contacto')" class="gc-btn gc-btn--primary gc-btn--lg">
-          <span>Iniciar Proyecto Ahora</span>
+          <span>Agendar diagnóstico</span>
           <svg viewBox="0 0 20 20" fill="none" width="20">
             <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -433,9 +440,9 @@
         <div class="gc-contact-layout">
           <div class="gc-contact-info gc-reveal">
             <span class="gc-eyebrow">Contacto</span>
-            <h2 class="gc-section__h2">Iniciemos algo <em>grande</em></h2>
+            <h2 class="gc-section__h2">Hablemos de tu <em>siguiente sistema</em></h2>
             <p class="gc-contact-desc">
-              Respuesta garantizada en menos de 24 horas. Una conversación real sobre tu proyecto — sin automatismos.
+              Cuéntanos qué proceso quieres ordenar, automatizar o convertir en SaaS. Te respondemos con una ruta concreta.
             </p>
 
             <div class="gc-contact-items">
@@ -486,11 +493,11 @@
                 <label for="f-service">Servicio de interés</label>
                 <select id="f-service" v-model="form.service">
                   <option value="">Selecciona un servicio</option>
-                  <option value="web">Web & Mobile Development</option>
-                  <option value="cloud">Cloud Solutions</option>
-                  <option value="ai">AI & Data Analytics</option>
+                  <option value="concilia">Concilia Cloud</option>
                   <option value="nom35">NOM-35 Digital</option>
-                  <option value="consulting">Consultoría Técnica</option>
+                  <option value="pulse">PulseOps</option>
+                  <option value="custom">Software a la medida</option>
+                  <option value="consulting">Diagnóstico técnico</option>
                 </select>
               </div>
               <div class="gc-form__field">
@@ -549,7 +556,7 @@
               </svg>
               <span>GIONCORE</span>
             </div>
-            <p class="gc-footer__tagline">Software Development & Technology</p>
+            <p class="gc-footer__tagline">Productos digitales, SaaS y automatización operativa</p>
             <a href="mailto:javier@gioncore.com" class="gc-footer__email">javier@gioncore.com</a>
           </div>
 
@@ -595,24 +602,24 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const navLinks = [
   { id: 'servicios', label: 'Servicios' },
-  { id: 'portfolio',  label: 'Portfolio' },
-  { id: 'porque',    label: 'Blog' },
-  { id: 'sobre',     label: 'Sobre Nosotros' },
+  { id: 'portfolio',  label: 'Productos' },
+  { id: 'porque',    label: 'Método' },
+  { id: 'sobre',     label: 'Empresa' },
 ]
 
-const techTags = ['Vue.js', 'React', 'AWS', 'Python', 'Node.js', 'AI/ML', 'NOM-35']
+const techTags = ['Laravel', 'Vue', 'SaaS', 'Automatización', 'NOM-35', 'Conciliación', 'Operaciones']
 
-const dashBars  = [42, 65, 50, 80, 58, 90, 72, 100]
+const dashBars  = [48, 72, 61, 86, 68, 94, 79, 98]
 const dashKpis  = [
-  { val: '99.97%', lbl: 'Precisión' },
-  { val: '0.3ms',  lbl: 'Latencia'  },
-  { val: '2.4M',   lbl: 'Req / día' },
+  { val: '24h', lbl: 'Ruta inicial' },
+  { val: '3x',  lbl: 'Base SaaS'  },
+  { val: '100%',   lbl: 'Evidencia' },
 ]
 
 const counterStats = [
-  { num: '40+', label: 'Proyectos entregados' },
-  { num: '12',  label: 'Países' },
-  { num: '5+',  label: 'Años de experiencia' },
+  { num: '3', label: 'Productos base' },
+  { num: '24h',  label: 'Respuesta inicial' },
+  { num: '2026',  label: 'Stack actualizado' },
 ]
 
 const hexGrid = (() => {
@@ -637,9 +644,9 @@ const hexGrid = (() => {
 
 const services = [
   {
-    title: 'Software a la medida',
-    desc:  'Plataformas web, paneles administrativos, CRMs, ERPs y sistemas internos hechos para la operación real de tu negocio.',
-    fit:   'empresas que ya tienen un proceso claro y necesitan convertirlo en una herramienta digital robusta.',
+    title: 'SaaS operativos',
+    desc:  'Plataformas con usuarios, roles, permisos, paneles, estados, reportes y flujos pensados para operación diaria.',
+    fit:   'empresas que quieren dejar hojas de cálculo, chats y capturas manuales para operar desde un sistema propio.',
     vb: '0 0 24 24',
     paths: [
       { d: 'M2 3h20v14H2zM8 21h8M12 17v4' },
@@ -647,9 +654,9 @@ const services = [
     ],
   },
   {
-    title: 'Automatización con IA',
-    desc:  'Flujos inteligentes para ahorrar horas operativas: captura de datos, asistentes internos, análisis documental y reportes automáticos.',
-    fit:   'equipos que reciben demasiadas solicitudes, archivos o tareas repetitivas y quieren operar con más velocidad.',
+    title: 'Automatización confiable',
+    desc:  'Flujos para conciliación, seguimiento, alertas, clasificación documental y generación de evidencias sin perder control humano.',
+    fit:   'equipos que repiten tareas críticas y necesitan reducir errores sin depender de automatismos opacos.',
     vb: '0 0 24 24',
     paths: [
       { d: 'M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1' },
@@ -657,9 +664,9 @@ const services = [
     ],
   },
   {
-    title: 'SaaS y productos digitales',
-    desc:  'Diseño y desarrollo de productos listos para vender: suscripciones, usuarios, permisos, pagos, dashboards y métricas.',
-    fit:   'negocios que quieren lanzar una plataforma propia y crecerla sin depender de soluciones genéricas.',
+    title: 'IA aplicada a procesos',
+    desc:  'Asistentes, lectura de documentos y tableros inteligentes integrados a sistemas reales, con datos auditables.',
+    fit:   'empresas que quieren usar IA para decidir mejor, no para decorar una presentación.',
     vb: '0 0 24 24',
     paths: [
       { d: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' },
@@ -669,53 +676,62 @@ const services = [
 ]
 
 const whyItems = [
-  { title: 'Metodologías Ágiles',       desc: 'Sprints de 2 semanas, demos continuas y entregas iterativas que mantienen el proyecto en movimiento.' },
-  { title: 'Soporte Dedicado',          desc: 'Canal directo con tu equipo de desarrollo. Sin intermediarios, sin esperas, respuesta en horas.' },
-  { title: 'Escalabilidad Garantizada', desc: 'Arquitecturas diseñadas para crecer. Tus sistemas crecen con tu negocio sin refactorizaciones costosas.' },
-  { title: 'Retorno de Inversión',      desc: 'Cada decisión técnica está orientada a impacto de negocio medible. Métricas claras desde el día uno.' },
+  { title: 'Diagnóstico antes de construir', desc: 'Mapeamos responsables, reglas, excepciones y evidencia necesaria antes de tocar código.' },
+  { title: 'Entregas visibles',          desc: 'Trabajamos por módulos funcionales, con demos y decisiones documentadas para evitar sorpresas.' },
+  { title: 'Seguridad desde la base', desc: 'Roles, permisos, validaciones, logs y respaldos se consideran parte del producto, no un extra.' },
+  { title: 'Mantenimiento posible',      desc: 'Código ordenado, dependencias razonables y arquitectura lista para seguir evolucionando.' },
 ]
 
 const portfolio = [
   {
+    title:    'Concilia Cloud',
+    category: 'FinOps',
+    year:     '2026',
+    desc:     'Plataforma para conciliar pagos, facturas, cuentas por cobrar y discrepancias con trazabilidad por responsable.',
+    url:      'concilia.gioncore.com',
+    badge:    'CONCILIA',
+    signal:   'Casos cerrados',
+    metric:   '92%',
+    stage:    'Ideal para administración, cobranza, contabilidad y equipos que necesitan evidencia por movimiento.',
+    screenBg: 'linear-gradient(135deg, #102033 0%, #14515b 48%, #1d6b58 100%)',
+    bars:     [44, 58, 72, 61, 84, 76, 92, 88],
+    results:  ['Matching de pagos', 'Bitácora por caso', 'Alertas de diferencia'],
+  },
+  {
     title:    'NOM-35 Digital',
-    category: 'HR Tech',
+    category: 'HR Compliance',
     year:     '2026',
     desc:     'Sistema para aplicar cuestionarios NOM-035, administrar centros de trabajo y generar reportes listos para auditoría.',
     url:      'nom35.gioncore.com',
     badge:    'NOM-35',
-    screenBg: 'linear-gradient(135deg, #0D2240 0%, #0a3d6e 100%)',
+    signal:   'Evidencias',
+    metric:   'PDF',
+    stage:    'Diseñado para RRHH, seguridad laboral y consultores que necesitan orden, historial y reportes exportables.',
+    screenBg: 'linear-gradient(135deg, #0D2240 0%, #113b70 52%, #0b6f8d 100%)',
     bars:     [40, 65, 48, 82, 60, 95, 70, 100],
-    results:  ['Evaluaciones digitales', 'Reportes PDF', 'Multi-empresa'],
+    results:  ['Evaluaciones digitales', 'Reportes por centro', 'Multi-empresa'],
   },
   {
-    title:    'Portal de Ventas SaaS',
-    category: 'E-commerce B2B',
-    year:     '2026',
-    desc:     'Landing comercial con captura de leads, catálogo de soluciones, cotización inicial y seguimiento de prospectos.',
-    url:      'sales.gioncore.com',
-    badge:    'LEADS',
-    screenBg: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)',
-    bars:     [55, 70, 60, 85, 72, 90, 80, 94],
-    results:  ['CRM inicial', 'Formulario inteligente', 'Panel admin'],
-  },
-  {
-    title:    'Automatizador Operativo',
+    title:    'PulseOps',
     category: 'AI Ops',
     year:     '2026',
-    desc:     'Herramienta para convertir archivos, solicitudes y tareas repetitivas en flujos automáticos con métricas de avance.',
-    url:      'ops.gioncore.com',
-    badge:    'AI OPS',
-    screenBg: 'linear-gradient(135deg, #0a2f1e 0%, #0d4a2e 100%)',
+    desc:     'Centro operativo para convertir solicitudes, documentos y tareas repetitivas en flujos medibles con apoyo de IA.',
+    url:      'pulseops.gioncore.com',
+    badge:    'PULSE',
+    signal:   'Tareas visibles',
+    metric:   '24/7',
+    stage:    'Pensado para operaciones internas, soporte, backoffice y áreas que viven entre archivos, correos y pendientes.',
+    screenBg: 'linear-gradient(135deg, #1b2132 0%, #4b3765 52%, #0e766e 100%)',
     bars:     [50, 72, 60, 88, 65, 95, 78, 100],
-    results:  ['Menos trabajo manual', 'Dashboards', 'Alertas'],
+    results:  ['Clasificación IA', 'Dashboards', 'Alertas accionables'],
   },
 ]
 
 const team = [
-  { initials: 'GJ', name: 'Gilberto de Jesús', role: 'CEO & Lead Engineer'  },
-  { initials: 'ML', name: 'María López',    role: 'Head of AI'            },
-  { initials: 'CR', name: 'Carlos Ruiz',    role: 'Cloud Architect'       },
-  { initials: 'AV', name: 'Ana Vargas',     role: 'Product & UX'          },
+  { initials: 'GJ', name: 'Gilberto de Jesús', role: 'Founder & Lead Engineer'  },
+  { initials: 'UX', name: 'Producto y experiencia',    role: 'Flujos claros para usuarios reales'            },
+  { initials: 'AI', name: 'Automatización e IA',    role: 'Modelos útiles con supervisión humana'       },
+  { initials: 'CL', name: 'Cloud y seguridad',     role: 'Infraestructura mantenible y respaldos'          },
 ]
 
 const contactItems = [
@@ -733,7 +749,7 @@ const contactItems = [
   },
   {
     label: 'Disponibilidad',
-    val:   'Proyectos Q2 2025 ●',
+    val:   'Diagnósticos 2026 abiertos ●',
     vb:    '0 0 20 20',
     paths: ['M10 3a7 7 0 100 14A7 7 0 0010 3z', 'M10 7v3l2 2'],
     green: true,
@@ -771,18 +787,18 @@ const footerCols = [
   {
     title: 'Servicios',
     links: [
-      { label: 'Web & Mobile',   href: '#servicios', scroll: true },
-      { label: 'Cloud',          href: '#servicios', scroll: true },
-      { label: 'AI & Analytics', href: '#servicios', scroll: true },
-      { label: 'NOM-35 Digital', href: '#servicios', scroll: true },
+      { label: 'Concilia Cloud',   href: '#portfolio', scroll: true },
+      { label: 'NOM-35 Digital',          href: '#portfolio', scroll: true },
+      { label: 'PulseOps', href: '#portfolio', scroll: true },
+      { label: 'Software a la medida', href: '#servicios', scroll: true },
     ],
   },
   {
     title: 'Empresa',
     links: [
-      { label: 'Sobre Nosotros', href: '#sobre',    scroll: true },
-      { label: 'Portfolio',      href: '#portfolio', scroll: true },
-      { label: 'Blog',           href: '#porque',   scroll: true },
+      { label: 'Empresa', href: '#sobre',    scroll: true },
+      { label: 'Productos',      href: '#portfolio', scroll: true },
+      { label: 'Método',           href: '#porque',   scroll: true },
     ],
   },
   {
@@ -927,13 +943,16 @@ onUnmounted(() => {
   --electric-blue:#007BFF;
   --green-accent: #A3E635;
   --tech-cyan:    #00c6ff;
+  --steel:        #334155;
+  --teal:         #0f766e;
+  --violet:       #6d5dfc;
   --ink:          #0D2240;
   --muted:        #5a6a80;
   --dim:          #8899aa;
   --border:       rgba(13,34,64,0.1);
   --border2:      rgba(13,34,64,0.18);
-  --card-shadow:  0 4px 24px rgba(13,34,64,0.1);
-  --card-shadow-hover: 0 20px 60px rgba(13,34,64,0.18);
+  --card-shadow:  0 10px 30px rgba(13,34,64,0.08);
+  --card-shadow-hover: 0 24px 70px rgba(13,34,64,0.18);
 
   --grad-blue:  linear-gradient(135deg, #007BFF 0%, #00c6ff 100%);
   --grad-green: linear-gradient(135deg, #A3E635 0%, #22c55e 100%);
@@ -1071,8 +1090,8 @@ em { font-style: normal; }
 
 /* ═══════════ SECTION HEADERS ═══════════ */
 .gc-section { padding: 100px 0; }
-.gc-section--light { background: white; }
-.gc-section--navy  { background: var(--deep-navy); }
+.gc-section--light { background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+.gc-section--navy  { background: linear-gradient(135deg, #0D2240 0%, #14283f 52%, #092f36 100%); }
 .gc-section__head  { text-align: center; margin-bottom: 64px; }
 .gc-section__h2 {
   font-family: var(--font-display);
@@ -1149,25 +1168,28 @@ em { font-style: normal; }
   padding: calc(var(--nav-h) + 60px) 28px 80px;
 }
 
-/* Mesh orbs */
+/* Animated depth layers */
 .gc-hero__mesh { position: absolute; inset: 0; pointer-events: none; }
 .gc-mesh-orb {
-  position: absolute; border-radius: 50%;
-  filter: blur(80px); opacity: 0.35;
+  position: absolute;
+  border-radius: 28px;
+  filter: blur(38px);
+  opacity: 0.22;
+  transform: rotate(-12deg);
 }
 .gc-mesh-orb--1 {
-  width: 600px; height: 600px; top: -100px; right: -100px;
-  background: radial-gradient(circle, rgba(0,123,255,0.5) 0%, transparent 70%);
+  width: 620px; height: 360px; top: -90px; right: -80px;
+  background: linear-gradient(135deg, rgba(0,123,255,0.5), rgba(15,118,110,0.08));
   animation: orbFloat 12s ease-in-out infinite;
 }
 .gc-mesh-orb--2 {
-  width: 400px; height: 400px; bottom: -80px; left: 10%;
-  background: radial-gradient(circle, rgba(163,230,53,0.4) 0%, transparent 70%);
+  width: 480px; height: 260px; bottom: -70px; left: 8%;
+  background: linear-gradient(135deg, rgba(163,230,53,0.28), rgba(0,198,255,0.08));
   animation: orbFloat 16s ease-in-out infinite reverse;
 }
 .gc-mesh-orb--3 {
-  width: 300px; height: 300px; top: 40%; left: 40%;
-  background: radial-gradient(circle, rgba(0,198,255,0.25) 0%, transparent 70%);
+  width: 360px; height: 220px; top: 42%; left: 42%;
+  background: linear-gradient(135deg, rgba(109,93,252,0.26), rgba(0,198,255,0.08));
   animation: orbFloat 10s ease-in-out infinite 3s;
 }
 @keyframes orbFloat {
@@ -1218,7 +1240,7 @@ em { font-style: normal; }
 /* H1 lines - stagger entrance */
 .gc-hero__h1 {
   font-family: var(--font-display);
-  font-size: clamp(42px, 5vw, 70px);
+  font-size: clamp(40px, 5vw, 68px);
   font-weight: 700; line-height: 1.06; letter-spacing: -0.04em;
   color: white; margin-bottom: 24px;
   display: flex; flex-direction: column;
@@ -1377,7 +1399,7 @@ em { font-style: normal; }
 /* ═══════════ SERVICES ═══════════ */
 .gc-services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .gc-service-card {
-  padding: 32px 26px; border-radius: var(--r-lg);
+  padding: 32px 26px; border-radius: 16px;
   background: white; border: 1px solid var(--border);
   box-shadow: var(--card-shadow);
   position: relative; overflow: hidden;
@@ -1408,7 +1430,7 @@ em { font-style: normal; }
   background: linear-gradient(135deg, rgba(0,123,255,0.15) 0%, rgba(163,230,53,0.15) 100%);
 }
 .gc-service-card__title {
-  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  font-family: var(--font-display); font-size: 18px; font-weight: 700;
   letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px;
 }
 .gc-service-card__desc { font-size: 13px; color: var(--muted); line-height: 1.72; margin-bottom: 20px; }
@@ -1483,56 +1505,101 @@ em { font-style: normal; }
 .gc-counter__lbl { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
 
 /* ═══════════ PORTFOLIO ═══════════ */
-.gc-portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.gc-portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: stretch; }
 .gc-portfolio-card {
-  border-radius: var(--r-lg); overflow: hidden;
-  background: white; border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  background: white; border: 1px solid rgba(13,34,64,0.12);
   box-shadow: var(--card-shadow);
-  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s;
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s, border-color 0.35s;
+  display: flex; flex-direction: column;
 }
-.gc-portfolio-card:hover { transform: translateY(-10px) scale(1.01); box-shadow: var(--card-shadow-hover); }
+.gc-portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(0,123,255,0.24);
+}
 
 .gc-portfolio-card__visual { position: relative; }
-.gc-mockup { border-radius: var(--r) var(--r) 0 0; overflow: hidden; }
+.gc-mockup { border-radius: 16px 16px 0 0; overflow: hidden; }
 .gc-mockup__bar {
   display: flex; align-items: center; gap: 8px; padding: 10px 14px;
-  background: #e8eaed; border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: #eef2f6; border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .gc-mockup__url {
   flex: 1; margin-left: 6px; padding: 4px 10px; border-radius: 6px;
   background: white; font-family: var(--font-mono); font-size: 10px; color: var(--muted);
 }
-.gc-mockup__screen { height: 140px; display: flex; align-items: center; justify-content: center; }
-.gc-mockup__content { width: 90%; }
-.gc-mockup__mini-bars { display: flex; align-items: flex-end; gap: 4px; height: 60px; margin-bottom: 10px; }
+.gc-mockup__screen {
+  height: 168px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.gc-mockup__screen::before {
+  content: '';
+  position: absolute; inset: 18px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+}
+.gc-mockup__content { width: 88%; position: relative; z-index: 1; }
+.gc-mockup__mini-bars { display: flex; align-items: flex-end; gap: 5px; height: 66px; margin-bottom: 12px; }
 .gc-mockup__mini-bar {
   flex: 1; border-radius: 2px 2px 0 0;
-  background: rgba(255,255,255,0.6);
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.34));
   animation: growBar 0.6s ease var(--d) both;
 }
 .gc-mockup__badge {
-  display: inline-block; padding: 3px 10px; border-radius: 100px;
-  background: rgba(163,230,53,0.9); color: #1a4500;
-  font-size: 11px; font-weight: 800; letter-spacing: 0.04em;
+  display: inline-block; padding: 4px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.9); color: #102033;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+.gc-mockup__signal {
+  margin-top: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 10px; border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.72);
+  backdrop-filter: blur(8px);
+}
+.gc-mockup__signal span {
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.gc-mockup__signal strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: white;
 }
 .gc-portfolio-card__overlay {
-  position: absolute; inset: 0; border-radius: var(--r) var(--r) 0 0;
-  background: rgba(0,123,255,0.88);
+  position: absolute; inset: 0; border-radius: 16px 16px 0 0;
+  background: rgba(13,34,64,0.78);
   display: flex; align-items: center; justify-content: center;
   opacity: 0; transition: opacity 0.3s;
   backdrop-filter: blur(4px);
 }
 .gc-portfolio-card__overlay.visible { opacity: 1; }
-.gc-portfolio-card__overlay-text { color: white; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; }
+.gc-portfolio-card__overlay-text {
+  color: white; font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 10px 16px; border: 1px solid rgba(255,255,255,0.34); border-radius: 999px;
+}
 
-.gc-portfolio-card__info { padding: 22px; }
+.gc-portfolio-card__info { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .gc-portfolio-card__meta { display: flex; gap: 8px; margin-bottom: 12px; }
-.gc-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; background: rgba(0,123,255,0.08); color: var(--electric-blue); }
+.gc-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: rgba(0,123,255,0.08); color: var(--electric-blue); }
 .gc-tag--year { background: rgba(13,34,64,0.06); color: var(--muted); }
-.gc-portfolio-card__title { font-family: var(--font-display); font-size: 16px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; }
-.gc-portfolio-card__desc { font-size: 13px; color: var(--muted); line-height: 1.68; margin-bottom: 14px; }
-.gc-portfolio-card__results { display: flex; flex-wrap: wrap; gap: 6px; }
-.gc-result { font-size: 11.5px; font-weight: 600; color: #16a34a; background: rgba(22,163,74,0.08); padding: 3px 10px; border-radius: 100px; }
+.gc-portfolio-card__title { font-family: var(--font-display); font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; }
+.gc-portfolio-card__desc { font-size: 13.5px; color: var(--muted); line-height: 1.68; margin-bottom: 14px; }
+.gc-portfolio-card__stage {
+  font-size: 12.5px;
+  color: var(--steel);
+  line-height: 1.6;
+  padding: 12px 0;
+  border-top: 1px solid rgba(13,34,64,0.08);
+  border-bottom: 1px solid rgba(13,34,64,0.08);
+  margin-bottom: 14px;
+}
+.gc-portfolio-card__results { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.gc-result { font-size: 11.5px; font-weight: 700; color: #0f766e; background: rgba(15,118,110,0.08); padding: 4px 10px; border-radius: 999px; }
 
 /* ═══════════ ABOUT ═══════════ */
 .gc-about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
