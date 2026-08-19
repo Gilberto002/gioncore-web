@@ -231,9 +231,9 @@
     <section class="gc-section gc-section--light" id="servicios" aria-label="Nuestros Servicios">
       <div class="gc-container">
         <div class="gc-section__head gc-reveal" style="text-align:center">
-          <span class="gc-eyebrow">Capacidades</span>
-          <h2 class="gc-section__h2">Construimos sistemas que <em>aguantan operación</em></h2>
-          <p class="gc-section__desc">Nos enfocamos en flujos completos: usuarios, permisos, datos, reportes, automatización y mantenimiento.</p>
+          <span class="gc-eyebrow">Soluciones base</span>
+          <h2 class="gc-section__h2">De proceso manual a <em>plataforma confiable</em></h2>
+          <p class="gc-section__desc">Partimos de tres líneas de trabajo probadas: SaaS interno, automatización con control e IA aplicada a operación.</p>
         </div>
 
         <div class="gc-services-grid">
@@ -1464,9 +1464,11 @@ em { font-style: normal; }
 /* ═══════════ SERVICES ═══════════ */
 .gc-services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .gc-service-card {
-  padding: 34px 28px; border-radius: 16px;
+  min-height: 360px;
+  padding: 38px 28px 30px;
+  border-radius: 18px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 100%);
+    linear-gradient(180deg, rgba(255,255,255,0.99) 0%, rgba(245,248,252,0.99) 100%);
   border: 1px solid rgba(8,27,51,0.12);
   box-shadow: var(--card-shadow);
   position: relative; overflow: hidden;
@@ -1477,9 +1479,10 @@ em { font-style: normal; }
 .gc-service-card::before {
   content: '';
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--electric-blue), var(--tech-cyan), var(--green-accent));
+  inset: 0;
+  height: 92px;
+  background:
+    linear-gradient(135deg, rgba(18,100,226,0.13), rgba(24,182,217,0.07) 52%, rgba(126,217,87,0.1));
   opacity: 0.9;
   z-index: 0;
 }
@@ -1505,26 +1508,29 @@ em { font-style: normal; }
 }
 .gc-service-card__number {
   font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  color: rgba(0,123,255,0.2); letter-spacing: 0.1em;
-  margin-bottom: 16px; display: block;
+  color: rgba(8,27,51,0.38);
+  letter-spacing: 0.14em;
+  margin-bottom: 18px;
+  display: block;
 }
 .gc-service-card__icon {
-  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 20px;
-  background: linear-gradient(135deg, rgba(0,123,255,0.08) 0%, rgba(163,230,53,0.08) 100%);
-  border: 1px solid rgba(0,123,255,0.12);
+  width: 58px; height: 58px; border-radius: 16px; margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(18,100,226,0.18);
+  box-shadow: 0 12px 30px rgba(18,100,226,0.12);
   display: flex; align-items: center; justify-content: center;
   transition: transform 0.3s, background 0.3s;
 }
 .gc-service-card:hover .gc-service-card__icon,
 .gc-service-card.active .gc-service-card__icon {
-  transform: scale(1.1) rotate(3deg);
-  background: linear-gradient(135deg, rgba(0,123,255,0.15) 0%, rgba(163,230,53,0.15) 100%);
+  transform: none;
+  background: #ffffff;
 }
 .gc-service-card__title {
-  font-family: var(--font-display); font-size: 18px; font-weight: 700;
-  letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px;
+  font-family: var(--font-display); font-size: 22px; font-weight: 800;
+  letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;
 }
-.gc-service-card__desc { font-size: 13px; color: var(--muted); line-height: 1.72; margin-bottom: 20px; }
+.gc-service-card__desc { font-size: 14px; color: var(--muted); line-height: 1.78; margin-bottom: 22px; }
 .gc-service-card__detail {
   margin: -4px 0 18px;
   padding: 12px 14px;
@@ -1541,7 +1547,8 @@ em { font-style: normal; }
 }
 .gc-service-card__cta {
   display: flex; align-items: center; gap: 6px;
-  font-size: 13px; font-weight: 700; color: var(--electric-blue);
+  margin-top: auto;
+  font-size: 13px; font-weight: 800; color: var(--electric-blue);
   transition: gap 0.2s;
 }
 .gc-service-card:hover .gc-service-card__cta,
