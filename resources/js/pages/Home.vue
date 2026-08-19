@@ -1493,7 +1493,7 @@ em { font-style: normal; }
 }
 .gc-service-card:hover,
 .gc-service-card.active {
-  transform: translateY(-8px);
+  transform: none;
   box-shadow: var(--card-shadow-hover);
   border-color: rgba(18,100,226,0.28);
   background:
@@ -1555,13 +1555,10 @@ em { font-style: normal; }
 }
 
 .gc-service-card__shine {
-  position: absolute; inset: 0;
-  z-index: 0;
-  background: linear-gradient(135deg, rgba(24,182,217,0.08) 0%, transparent 58%);
-  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+  display: none;
 }
 .gc-service-card:hover .gc-service-card__shine,
-.gc-service-card.active .gc-service-card__shine { opacity: 1; }
+.gc-service-card.active .gc-service-card__shine { opacity: 0; }
 
 /* ═══════════ WHY ═══════════ */
 .gc-why-layout { display: grid; grid-template-columns: 4fr 6fr; gap: 80px; align-items: center; }
