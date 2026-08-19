@@ -230,46 +230,49 @@
     <!-- ══════════════ SERVICIOS ══════════════ -->
     <section class="gc-section gc-section--light" id="servicios" aria-label="Nuestros Servicios">
       <div class="gc-container">
-        <div class="gc-section__head gc-reveal" style="text-align:center">
-          <span class="gc-eyebrow">Soluciones base</span>
-          <h2 class="gc-section__h2">De proceso manual a <em>plataforma confiable</em></h2>
-          <p class="gc-section__desc">Partimos de tres líneas de trabajo probadas: SaaS interno, automatización con control e IA aplicada a operación.</p>
+        <div class="gc-section__head gc-section__head--services gc-reveal">
+          <div>
+            <span class="gc-eyebrow">Capacidades</span>
+            <h2 class="gc-section__h2">Tecnología que ordena<br><em>la operación real</em></h2>
+          </div>
+          <p class="gc-section__desc">Convertimos procesos dispersos en productos digitales claros, medibles y preparados para crecer con tu empresa.</p>
         </div>
 
         <div class="gc-services-grid">
-          <div
+          <article
             v-for="(svc, i) in services"
             :key="i"
-            class="gc-service-card gc-reveal"
-            :style="{ transitionDelay: (i * 0.12) + 's' }"
-            :class="{ hovered: hovSvc === i, active: activeSvc === i }"
-            @mouseenter="hovSvc = i"
-            @mouseleave="hovSvc = null"
-            @click="activeSvc = activeSvc === i ? null : i"
+            class="gc-service-card"
+            :class="{ active: activeSvc === i }"
           >
-            <div class="gc-service-card__number">0{{ i + 1 }}</div>
-            <div class="gc-service-card__icon">
-              <svg :viewBox="svc.vb" fill="none" width="32" height="32">
-                <path v-for="(p, j) in svc.paths" :key="j"
-                      :d="p.d" :stroke="p.stroke || '#007BFF'"
-                      :fill="p.fill || 'none'"
-                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <div class="gc-service-card__top">
+              <div class="gc-service-card__icon">
+                <svg :viewBox="svc.vb" fill="none" width="28" height="28" aria-hidden="true">
+                  <path v-for="(p, j) in svc.paths" :key="j"
+                        :d="p.d" :stroke="p.stroke || '#1264E2'"
+                        :fill="p.fill || 'none'"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="gc-service-card__number">0{{ i + 1 }}</span>
             </div>
             <h3 class="gc-service-card__title">{{ svc.title }}</h3>
             <p class="gc-service-card__desc">{{ svc.desc }}</p>
             <div v-if="activeSvc === i" class="gc-service-card__detail">
               <span>Ideal para:</span> {{ svc.fit }}
             </div>
-            <div class="gc-service-card__cta">
-              {{ activeSvc === i ? 'Ver menos' : 'Saber más' }}
+            <button
+              type="button"
+              class="gc-service-card__cta"
+              :aria-expanded="activeSvc === i"
+              @click="activeSvc = activeSvc === i ? null : i"
+            >
+              {{ activeSvc === i ? 'Cerrar detalle' : 'Ver más' }}
               <svg viewBox="0 0 16 16" fill="none" width="14">
                 <path d="M3 8h10M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
-            </div>
-            <div class="gc-service-card__border-anim"></div>
-            <div class="gc-service-card__shine"></div>
-          </div>
+            </button>
+          </article>
         </div>
       </div>
     </section>
@@ -834,7 +837,6 @@ const footerCols = [
 // ──────────────────────────────────────────
 const scrolled    = ref(false)
 const mobileOpen  = ref(false)
-const hovSvc      = ref(null)
 const activeSvc   = ref(null)
 const hovBar      = ref(null)
 const hovProj     = ref(null)
@@ -1462,110 +1464,124 @@ em { font-style: normal; }
 @keyframes scrollWheel { 0%{transform:translateY(0);opacity:1} 100%{transform:translateY(12px);opacity:0} }
 
 /* ═══════════ SERVICES ═══════════ */
-.gc-services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+#servicios {
+  background: #f6f8fb;
+  border-top: 1px solid rgba(13,34,64,0.08);
+  border-bottom: 1px solid rgba(13,34,64,0.08);
+}
+.gc-section__head--services {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: end;
+  gap: 72px;
+  text-align: left;
+  padding-bottom: 34px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(13,34,64,0.14);
+}
+.gc-section__head--services .gc-section__h2 { margin-bottom: 0; }
+.gc-section__head--services .gc-section__desc {
+  max-width: 430px;
+  margin: 0 0 4px;
+}
+.gc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
 .gc-service-card {
-  min-height: 360px;
-  padding: 38px 28px 30px;
-  border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.99) 0%, rgba(245,248,252,0.99) 100%);
-  border: 1px solid rgba(8,27,51,0.12);
-  box-shadow: var(--card-shadow);
-  position: relative; overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s, border-color 0.3s;
-  cursor: pointer;
-  isolation: isolate;
+  min-height: 390px;
+  padding: 34px 32px 30px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid rgba(13,34,64,0.14);
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
-.gc-service-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  height: 92px;
-  background:
-    linear-gradient(135deg, rgba(18,100,226,0.13), rgba(24,182,217,0.07) 52%, rgba(126,217,87,0.1));
-  opacity: 0.9;
-  z-index: 0;
-}
-.gc-service-card::after {
-  content: '';
-  position: absolute;
-  width: 150px; height: 150px;
-  right: -76px; top: -76px;
-  background: radial-gradient(circle, rgba(18,100,226,0.12), transparent 68%);
-  z-index: 0;
-}
+.gc-service-card:first-child { border-left: 1px solid rgba(13,34,64,0.14); }
 .gc-service-card:hover,
 .gc-service-card.active {
-  transform: none;
-  box-shadow: var(--card-shadow-hover);
-  border-color: rgba(18,100,226,0.28);
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: #ffffff;
+  box-shadow: inset 0 3px 0 var(--electric-blue), 0 18px 44px rgba(8,27,51,0.08);
 }
-.gc-service-card > * {
-  position: relative;
-  z-index: 1;
+.gc-service-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 42px;
 }
 .gc-service-card__number {
-  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  color: rgba(8,27,51,0.38);
-  letter-spacing: 0.14em;
-  margin-bottom: 18px;
-  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(8,27,51,0.4);
 }
 .gc-service-card__icon {
-  width: 58px; height: 58px; border-radius: 16px; margin-bottom: 24px;
-  background: #ffffff;
-  border: 1px solid rgba(18,100,226,0.18);
-  box-shadow: 0 12px 30px rgba(18,100,226,0.12);
-  display: flex; align-items: center; justify-content: center;
-  transition: transform 0.3s, background 0.3s;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: #eaf1fc;
+  border: 1px solid rgba(18,100,226,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
 }
 .gc-service-card:hover .gc-service-card__icon,
-.gc-service-card.active .gc-service-card__icon {
-  transform: none;
-  background: #ffffff;
-}
+.gc-service-card.active .gc-service-card__icon { background: #dfeafb; }
 .gc-service-card__title {
-  font-family: var(--font-display); font-size: 22px; font-weight: 800;
-  letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;
+  max-width: 250px;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 750;
+  color: var(--ink);
+  margin-bottom: 14px;
 }
-.gc-service-card__desc { font-size: 14px; color: var(--muted); line-height: 1.78; margin-bottom: 22px; }
+.gc-service-card__desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
 .gc-service-card__detail {
-  margin: -4px 0 18px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  background: rgba(0,123,255,0.06);
-  border: 1px solid rgba(0,123,255,0.12);
+  margin: 0 0 20px;
+  padding: 13px 0 13px 14px;
+  border-left: 2px solid var(--electric-blue);
   color: var(--muted);
   font-size: 12.5px;
   line-height: 1.6;
 }
-.gc-service-card__detail span {
-  color: var(--electric-blue);
-  font-weight: 800;
-}
+.gc-service-card__detail span { color: var(--ink); font-weight: 800; }
 .gc-service-card__cta {
-  display: flex; align-items: center; gap: 6px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-top: auto;
-  font-size: 13px; font-weight: 800; color: var(--electric-blue);
-  transition: gap 0.2s;
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(18,100,226,0.35);
+  background: transparent;
+  color: var(--electric-blue);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
 }
-.gc-service-card:hover .gc-service-card__cta,
-.gc-service-card.active .gc-service-card__cta { gap: 10px; }
-
-/* Animated border on hover — usar box-shadow en lugar de pseudo-elemento con z-index */
-.gc-service-card__border-anim { display: none; }
-.gc-service-card:hover,
-.gc-service-card.active {
-  box-shadow: var(--card-shadow-hover), 0 0 0 2px rgba(18,100,226,0.16);
+.gc-service-card__cta svg { transition: transform 0.2s ease; }
+.gc-service-card__cta:hover svg { transform: translateX(4px); }
+.gc-service-card__cta:focus-visible {
+  outline: 3px solid rgba(18,100,226,0.22);
+  outline-offset: 5px;
 }
-
-.gc-service-card__shine {
-  display: none;
-}
-.gc-service-card:hover .gc-service-card__shine,
-.gc-service-card.active .gc-service-card__shine { opacity: 0; }
 
 /* ═══════════ WHY ═══════════ */
 .gc-why-layout { display: grid; grid-template-columns: 4fr 6fr; gap: 80px; align-items: center; }
@@ -1846,13 +1862,20 @@ em { font-style: normal; }
 
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 1024px) {
-  .gc-services-grid   { grid-template-columns: 1fr 1fr; }
   .gc-portfolio-grid  { grid-template-columns: 1fr; }
   .gc-why-layout      { grid-template-columns: 1fr; gap: 48px; }
   .gc-about-layout    { grid-template-columns: 1fr; gap: 48px; }
   .gc-footer__top     { grid-template-columns: 1fr; gap: 40px; }
 }
 @media (max-width: 860px) {
+  .gc-section__head--services { grid-template-columns: 1fr; gap: 20px; }
+  .gc-services-grid { grid-template-columns: 1fr; }
+  .gc-service-card,
+  .gc-service-card:first-child {
+    min-height: auto;
+    border-left: 1px solid rgba(13,34,64,0.14);
+    border-bottom: 1px solid rgba(13,34,64,0.14);
+  }
   .gc-hero__inner     { grid-template-columns: 1fr; }
   .gc-hero__visual    { display: none; }
   .gc-hero-products   { grid-template-columns: 1fr; }
